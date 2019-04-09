@@ -1,0 +1,43 @@
+一、babel
+
+核心：
+	babel-core
+
+功能：
+    babel-loader
+	babel-preset-env
+	babel-preset-react
+
+二、安装（下载）
+
+npm install babel-core babel-loader babel-preset-env babel-preset-react -S
+
+三、配置
+
+	v1:
+		webpack.config.js
+
+		{
+         test:/(\.jsx|\.js)$/,
+         use:{
+            loader:"babel-loader",
+            options:{
+              presets:["env",'react']
+            }
+         },
+         exclude:/node_modules/
+        }
+	
+	v2:
+		新增.babelrc文件
+
+		{
+				
+			"presets":['env','react']
+
+		}
+
+		
+
+
+

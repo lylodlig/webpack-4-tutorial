@@ -1,0 +1,43 @@
+一、插件
+
+	html-webpack-plugin
+
+	src :开发阶段（写代码）
+		
+		index.html
+		index.js
+		style.css
+		1.jpg
+			...
+
+	public ：生产阶段（项目要上线）
+
+2》使用  webpack.config.js
+
+	1》安装（下载）
+
+npm install html-webpack-plugin -S
+
+	2》配置(webpack.config.js)
+	
+	1>const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+		
+	2>plugins:[
+
+	    new HtmlWebpackPlugin({
+	      template:"./src/index.html",
+	      minify:{
+	          removeAttributeQuotes:true,//去除引号
+	          removeComments:true,//去除注释
+	          removeEmptyAttributes:true,//去除空属性
+	          collapseWhitespace:true//去除空格
+	        }
+
+	    })
+
+  ]
+
+
+
+
